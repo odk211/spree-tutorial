@@ -52,3 +52,11 @@ production:
   database: first_store_production
   username: first_store
   password: <%= ENV['FIRST_STORE_DATABASE_PASSWORD'] %>
+
+# demo environment use docker
+demo:
+  <<: *default
+  host: db
+  database: first_store_demo
+  password: <%= ENV['DB_ENV_MYSQL_ROOT_PASSWORD'] %>
+

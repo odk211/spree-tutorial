@@ -43,4 +43,10 @@ group :development, :test do
   gem 'spring'
 end
 
+group :demo do
+  # for docker env
+  gem 'rails_12factor'
+  gem 'therubyracer', platforms: :ruby
+end
+
 gem 'spree', github: 'spree/spree', branch: '3-0-stable'
