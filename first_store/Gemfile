@@ -43,3 +43,4 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'spree', github: 'spree/spree', branch: '3-0-stable'
