@@ -59,6 +59,18 @@ GIT
     spree_sample (3.0.2.beta)
       spree_core (= 3.0.2.beta)
 
+GIT
+  remote: git://github.com/spree/spree_auth_devise.git
+  revision: b554f307e5aa887110a70d54f8967c284f881375
+  branch: 3-0-stable
+  specs:
+    spree_auth_devise (3.0.0)
+      devise (~> 3.4.1)
+      devise-encryptable (= 0.1.2)
+      json
+      multi_json
+      spree_core (~> 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -111,6 +123,7 @@ GEM
       json
     awesome_nested_set (3.0.2)
       activerecord (>= 4.0.0, < 5)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.5.1)
@@ -147,6 +160,15 @@ GEM
       nokogiri (~> 1.6.0)
       polyglot
       rails (>= 3.1)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    devise-encryptable (0.1.2)
+      devise (>= 2.1.0)
     erubis (2.7.0)
     execjs (2.5.2)
     ffaker (1.32.1)
@@ -192,6 +214,7 @@ GEM
     mysql2 (0.3.18)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
     paperclip (4.2.4)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -304,6 +327,8 @@ GEM
       activesupport (>= 3.2)
       railties (>= 3.2)
       tzinfo
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -324,6 +349,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spree!
+  spree_auth_devise!
   spring
   therubyracer
   turbolinks
