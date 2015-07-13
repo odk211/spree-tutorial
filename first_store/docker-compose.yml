@@ -5,12 +5,15 @@ db:
 
 web:
   build: .
-  command: rake db:migrate:reset && rails server -b 0.0.0.0
+  command: /bin/bash -c "rake railties:install:migrations db:migrate:reset db:seed && rake spree_sample:load && rails server"
   ports:
-    - '3000:3000'
+    - "3000:3000"
+  expose:
+   - "3000"
   volumes:
     - '.:/usr/src/app'
   links:
     - db
   environment:
     - RAILS_ENV=demo
+    - AUTO_ACCEPT=true
