@@ -1,4 +1,8 @@
+[![Build Status](https://drone.io/github.com/odk211/spree-tutorial/status.png)](https://drone.io/github.com/odk211/spree-tutorial/latest)
+
 # spree tutorial
+
+spreeを色々動かしてみる。
 
 # Environment
 
