@@ -1,4 +1,4 @@
-[![Build Status](https://drone.io/github.com/odk211/spree-tutorial/status.png)](https://drone.io/github.com/odk211/spree-tutorial/latest)
+[![Build Status](https://drone.io/github.com/odk211/spree-tutorial/status.png)](https://drone.io/github.com/odk211/spree-tutorial/latest)[![Code Climate](https://codeclimate.com/github/odk211/spree-tutorial/badges/gpa.svg)](https://codeclimate.com/github/odk211/spree-tutorial)[![Test Coverage](https://codeclimate.com/github/odk211/spree-tutorial/badges/coverage.svg)](https://codeclimate.com/github/odk211/spree-tutorial/coverage)
 
 # spree tutorial
 
