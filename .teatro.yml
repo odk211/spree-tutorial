@@ -1,0 +1,15 @@
+stage:
+  before:
+    - rake railties:install:migrations
+  database:
+    - rake db:migrate:reset db:seed
+    - rake spree_sample:load
+  after_database:
+    - rake assets:precompile
+  run:
+    - bundle exec rails server -b 0.0.0.0
+
+config:
+  database: mysql
+  services:
+    - mysql
