@@ -5,7 +5,7 @@ db:
 
 ap:
   build: .
-  command: /bin/bash -c "sleep 15 && rake railties:install:migrations db:migrate:reset db:seed && rake spree_sample:load assets:precompile && rails server -b 0.0.0.0"
+  command: /bin/bash -c "sleep 15 && rake db:migrate:reset db:seed && rake spree_sample:load assets:precompile && rails server -b 0.0.0.0"
   ports:
     - "3000:3000"
   expose:
