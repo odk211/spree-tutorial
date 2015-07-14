@@ -1,15 +1,16 @@
 stage:
   before:
-    - rake railties:install:migrations
+    - export AUTO_ACCEPT=true
+    - export RAILS_SERVE_STATIC_FILES=true
+    - export SECRET_KEY_BASE=3e2ddf71c1c5651331b9c805b5ecf2290b60a37d5220ee4326312d959cafbffc62616c9696ddfff528309995d038d77a560f08444b571dd322061af4bdeb1f87
   database:
-    - rake db:migrate:reset db:seed
-    - rake spree_sample:load
-  after_database:
-    - rake assets:precompile
+    - bundle exec rake db:migrate:reset db:seed
+    - bundle exec rake spree_sample:load
+  assets:
+    - bundle exec rake assets:precompile
   run:
     - bundle exec rails server -b 0.0.0.0
-
 config:
-  database: mysql
+  database: mysql2
   services:
     - mysql
