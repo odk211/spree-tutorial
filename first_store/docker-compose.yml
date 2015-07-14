@@ -3,7 +3,7 @@ db:
   environment:
     - MYSQL_ROOT_PASSWORD=root
 
-web:
+ap:
   build: .
   command: /bin/bash -c "sleep 15 && rake railties:install:migrations db:migrate:reset db:seed && rake spree_sample:load assets:precompile && rails server -b 0.0.0.0"
   ports:
