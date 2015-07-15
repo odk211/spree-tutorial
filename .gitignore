@@ -85,3 +85,6 @@ build/
 _projects
 _steps
 _builds
+
+#ctags
+tags
