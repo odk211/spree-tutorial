@@ -80,3 +80,8 @@ build/
 
 # Ignore all generated spree sample files.
 /public/spree/products
+
+# wercker
+_projects
+_steps
+_builds
