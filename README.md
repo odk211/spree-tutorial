@@ -2,33 +2,39 @@
 
 # spree tutorial
 
-spreeを色々動かしてみる。
+ECサイトを構築するRailsベースのアプリケーション[Spree](https://spreecommerce.com/)を色々動かしてみる。
 
 # 環境構築
 
-以下を参考にした
-http://qiita.com/egopro/items/aba12261c053eecd6d19
+- Ruby
+
+  [参考](http://qiita.com/egopro/items/aba12261c053eecd6d19)
+
+- docker
+
+  docker, docker-machine, docker-composeを利用。  
+  無くても開発できるが、werckerでも使用するので、あると便利。
 
 # 利用サービス
 
 - [Wercker](http://wercker.com/)
 
-  CIに利用
+  CI  
   wercker CLIをインストールする事で、簡単にローカルにCI環境が再現できる
 
 - [Teatro](https://teatro.io/)
 
-  demoアプリケーションのdeploy
+  demoアプリケーションのdeploy  
   `.teatro.yml`にdeploy方法を記載したら、deployしてくれる
 
 - [SideCI](https://www.sideci.com/)
 
-  コードレビューツール。
+  コードレビューツール。  
   PR毎に静的解析してくれる。
 
 - [HoundCI](https://houndci.com/)
 
-  同じくコードレビューツール。
+  同じくコードレビューツール。  
   PR毎にスタイルのチェックをしてくれる。
 
 - [Code Climate](https://codeclimate.com/)
