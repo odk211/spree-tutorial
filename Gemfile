@@ -57,4 +57,4 @@ end
 
 gem 'spree', github: 'spree/spree', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
-gem 'spree_i18n',  git: 'git://github.com/spree/spree_i18n.git',  branch: '3-0-stable'
+gem 'spree_i18n',  git: 'git://github.com/odk211/spree_i18n.git',  branch: 'add-missing-translation-at-ja'
