@@ -88,3 +88,6 @@ _builds
 
 #ctags
 tags
+
+#idea
+.idea
