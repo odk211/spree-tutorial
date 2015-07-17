@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  host: <%= ENV['FIRST_STORE_DATABASE_HOST'] %>
   database: first_store_production
   username: first_store
   password: <%= ENV['FIRST_STORE_DATABASE_PASSWORD'] %>
