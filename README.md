@@ -1,4 +1,4 @@
-[![wercker status](https://app.wercker.com/status/93c374726ff835d1c3116a48e4753150/m "wercker status")](https://app.wercker.com/project/bykey/93c374726ff835d1c3116a48e4753150) [![Code Climate](https://codeclimate.com/github/odk211/spree-tutorial/badges/gpa.svg)](https://codeclimate.com/github/odk211/spree-tutorial) [![Test Coverage](https://codeclimate.com/github/odk211/spree-tutorial/badges/coverage.svg)](https://codeclimate.com/github/odk211/spree-tutorial/coverage)
+[![wercker status](https://app.wercker.com/status/ffa2ca687aed854f9e4ea0981d85d615/m "wercker status")](https://app.wercker.com/project/bykey/ffa2ca687aed854f9e4ea0981d85d615) [![Code Climate](https://codeclimate.com/github/otakemaru/spree-tutorial/badges/gpa.svg)](https://codeclimate.com/github/otakemaru/spree-tutorial) [![Test Coverage](https://codeclimate.com/github/otakemaru/spree-tutorial/badges/coverage.svg)](https://codeclimate.com/github/otakemaru/spree-tutorial/coverage)
 
 # spree tutorial
 
@@ -17,17 +17,17 @@ ECサイトを構築するRailsベースのアプリケーション[Spree](https
 
 # 利用サービス
 
-- [Wercker](http://wercker.com/)
+- [Wercker](https://app.wercker.com/#applications/55a88f8fd6c8a0a94219478e)
 
   CI  
   wercker CLIをインストールする事で、簡単にローカルにCI環境が再現できる
 
-- [Teatro](https://teatro.io/)
+- [Teatro](http://master.otakemaru-spree-tutorial-24ed74bfae18bad2ce0c.ttrcloud.com/)
 
   demoアプリケーションのdeploy  
   `.teatro.yml`にdeploy方法を記載したら、deployしてくれる
 
-- [SideCI](https://www.sideci.com/)
+- [SideCI](https://www.sideci.com/github_repositories/38983565/news_feed)
 
   コードレビューツール。  
   PR毎に静的解析してくれる。
@@ -37,6 +37,6 @@ ECサイトを構築するRailsベースのアプリケーション[Spree](https
   同じくコードレビューツール。  
   PR毎にスタイルのチェックをしてくれる。
 
-- [Code Climate](https://codeclimate.com/)
+- [Code Climate](https://codeclimate.com/github/otakemaru/spree-tutorial)
 
   コードの品質をチェックしてくれる。
