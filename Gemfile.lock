@@ -1,19 +1,6 @@
 GIT
-  remote: git://github.com/odk211/spree_i18n.git
-  revision: ce16ced22b2b5b597b13a69a12c1666f22b950ef
-  branch: add-missing-translation-at-ja
-  specs:
-    spree_i18n (3.0.0)
-      friendly_id-globalize
-      globalize (~> 5.0.1)
-      i18n_data (~> 0.5.1)
-      kaminari-i18n (~> 0.3.2)
-      rails-i18n (~> 4.0.1)
-      spree_core (~> 3.0.0)
-
-GIT
-  remote: git://github.com/spree/spree.git
-  revision: 3f78a6b9778e303412404daaeb61d15198ee0737
+  remote: git://github.com/odk211/spree.git
+  revision: ec3583b7692f5a0ddadc08b79a0ed671cfa1cdce
   branch: 3-0-stable
   specs:
     spree (3.0.2.beta)
@@ -71,6 +58,19 @@ GIT
       sprockets-rails (~> 2.2)
     spree_sample (3.0.2.beta)
       spree_core (= 3.0.2.beta)
+
+GIT
+  remote: git://github.com/odk211/spree_i18n.git
+  revision: 47d3cebfccbb2ef8f17eaaba4011362c5f2dda3a
+  branch: 3-0-stable
+  specs:
+    spree_i18n (3.0.0)
+      friendly_id-globalize
+      globalize (~> 5.0.1)
+      i18n_data (~> 0.5.1)
+      kaminari-i18n (~> 0.3.2)
+      rails-i18n (~> 4.0.1)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
@@ -131,7 +131,7 @@ GEM
       activerecord (>= 3.0)
     addressable (2.3.8)
     arel (6.0.2)
-    autoprefixer-rails (5.2.1)
+    autoprefixer-rails (5.2.1.1)
       execjs
       json
     awesome_nested_set (3.0.2)
@@ -229,9 +229,9 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
-    monetize (1.3.0)
-      money (~> 6.5.0)
-    money (6.5.1)
+    monetize (1.3.1)
+      money (~> 6.6)
+    money (6.6.0)
       i18n (>= 0.6.4, <= 0.7.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
@@ -345,13 +345,13 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    state_machines (0.2.2)
-    state_machines-activemodel (0.1.2)
+    state_machines (0.4.0)
+    state_machines-activemodel (0.3.0)
       activemodel (~> 4.1)
-      state_machines (~> 0.2.0)
-    state_machines-activerecord (0.2.0)
+      state_machines (>= 0.4.0)
+    state_machines-activerecord (0.3.0)
       activerecord (~> 4.1)
-      state_machines-activemodel (~> 0.1.0)
+      state_machines-activemodel (>= 0.3.0)
     stringex (2.5.2)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
