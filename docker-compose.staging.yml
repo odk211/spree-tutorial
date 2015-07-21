@@ -1,6 +1,8 @@
 ap:
   build: .
   command: /bin/bash -c "rake db:migrate:reset db:seed && rake spree_sample:load assets:precompile && rails server -b 0.0.0.0"
+  volumes:
+    - '.:/usr/src/app'
   ports:
     - "3000:3000"
   expose:
