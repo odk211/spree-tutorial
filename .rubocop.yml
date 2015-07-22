@@ -11,6 +11,9 @@ ActionFilter:
 Alias:
   Enabled: false
 
+Style/IndentHash:
+  Enabled: false
+
 ArrayJoin:
   Enabled: false
 

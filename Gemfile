@@ -47,12 +47,19 @@ end
 
 group :development do
   gem 'rails-erd'
+  gem 'rubocop'
 end
 
-group :demo do
+group :demo, :production do
   # for docker env
   gem 'rails_12factor'
   gem 'therubyracer', platforms: :ruby
+end
+
+group :production do
+  # upload images to S3
+  # Paperclip is not compatible with aws-sdk v2
+  gem 'aws-sdk', '< 2.0'
 end
 
 gem 'spree', github: 'odk211/spree', branch: '3-0-stable'
