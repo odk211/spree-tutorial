@@ -47,6 +47,7 @@ end
 
 group :development do
   gem 'rails-erd'
+  gem 'rubocop'
 end
 
 group :demo, :production do
