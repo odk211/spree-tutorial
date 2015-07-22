@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/odk211/spree.git
-  revision: e5869ee8b8e3e89927db5404f0f271ac58bc4b51
+  revision: 26c13f31ff60fb11a92a450586c48dae4192b8f1
   branch: 3-0-stable
   specs:
     spree (3.0.2.beta)
