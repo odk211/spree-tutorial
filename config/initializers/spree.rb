@@ -23,14 +23,11 @@ attachment_config = {
     small:   "100x100>",
     product: "240x240>",
     large:   "600x600>"
-
   },
-  path:          "/:class/:id/:style/:basename.:extension",
-  default_url:   "/:class/:id/:style/:basename.:extension",
   default_style: "product"
 }
 
-if Rails.env.production?
+if ENV['AWS_ACCESS_KEY_ID'].present?
   # S3 image upload settings
   attachment_config.merge! ({
                              s3_credentials: {
@@ -42,6 +39,8 @@ if Rails.env.production?
                              storage:        :s3,
                              s3_headers:     { "Cache-Control" => "max-age=31557600" },
                              s3_protocol:    "https",
+                             path:           "/:class/:id/:style/:basename.:extension",
+                             default_url:    "/:class/:id/:style/:basename.:extension",
                              bucket:         ENV['S3_BUCKET_NAME']
                            })
 else
