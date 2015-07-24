@@ -50,13 +50,10 @@ group :development do
   gem 'rubocop'
 end
 
-group :demo, :production do
+group :production do
   # for docker env
   gem 'rails_12factor'
   gem 'therubyracer', platforms: :ruby
-end
-
-group :production do
   # upload images to S3
   # Paperclip is not compatible with aws-sdk v2
   gem 'aws-sdk', '< 2.0'
