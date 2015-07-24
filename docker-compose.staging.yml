@@ -6,12 +6,14 @@ ap:
   ports:
     - "3000:3000"
   expose:
-   - "3000"
+    - "3000"
   environment:
     - RAILS_ENV=production
     - AUTO_ACCEPT=true
-    - RAILS_SERVE_STATIC_FILES=true
+    - RAILS_SERVE_STATIC_FILES
     - FIRST_STORE_DATABASE_HOST
+    - FIRST_STORE_DATABASE_USER
+    - FIRST_STORE_DATABASE_PASSWORD
     - AWS_ACCESS_KEY_ID
     - AWS_SECRET_ACCESS_KEY
     - S3_BUCKET_NAME
