@@ -22,6 +22,8 @@ ap:
     - APP_URL_OPTIONS_PORT
     - APP_URL_OPTIONS_PROTOCOL
     - SECRET_KEY_BASE
+    - BUNDLE_APP_CONFIG=.bundle
+    - BUNDLE_CLEAN=true
 
 web:
   build: middleware/nginx/
