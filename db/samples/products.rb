@@ -1,8 +1,9 @@
 Spree::Sample.load_sample("tax_categories")
 Spree::Sample.load_sample("shipping_categories")
 
-default_attrs            = {
-  description:       Faker::Lorem.paragraph,
+require 'csv'
+
+default_attrs = {
   available_on:      Time.zone.now,
   tax_category:      Spree::TaxCategory.first,
   shipping_category: Spree::ShippingCategory.first,
@@ -11,74 +12,20 @@ default_attrs            = {
 # I'm not sure it is needed or not.
 Spree::Config[:currency] = "JPY"
 
-products = [
-  {
-    name:  "Ruby on Rails Tote",
-    price: 15.99,
-  },
-  {
-    name:  "Ruby on Rails Bag",
-    price: 22.99,
-  },
-  {
-    name:  "Ruby on Rails Baseball Jersey",
-    price: 19.99,
-  },
-  {
-    name:  "Ruby on Rails Jr. Spaghetti",
-    price: 19.99,
+table = CSV.table(File.join(Rails.root, 'db', 'samples', 'data', 'medicine200.csv'))
 
-  },
-  {
-    name:  "Ruby on Rails Ringer T-Shirt",
-    price: 19.99,
-  },
-  {
-    name:  "Ruby Baseball Jersey",
-    price: 19.99,
-  },
-  {
-    name:  "Apache Baseball Jersey",
-    price: 19.99,
-  },
-  {
-    name:  "Spree Baseball Jersey",
-    price: 19.99,
-  },
-  {
-    name:  "Spree Jr. Spaghetti",
-    price: 19.99,
-  },
-  {
-    name:  "Spree Ringer T-Shirt",
-    price: 19.99,
-  },
-  {
-    name:  "Spree Tote",
-    price: 15.99,
-  },
-  {
-    name:  "Spree Bag",
-    price: 22.99,
-  },
-  {
-    name:  "Ruby on Rails Mug",
-    price: 13.99,
-  },
-  {
-    name:  "Ruby on Rails Stein",
-    price: 16.99,
-  },
-  {
-    name:  "Spree Stein",
-    price: 16.99,
-  },
-  {
-    name:  "Spree Mug",
-    price: 13.99,
-  }
-]
-
-products.each do |product_attrs|
-  Spree::Product.create!(default_attrs.merge(product_attrs))
+Spree::Product.transaction do
+  table.each do |csv_row|
+    row     = csv_row.to_hash
+    product = Spree::Product.create!(
+      default_attrs.merge(name:        row[:name],
+                          price:       row[:price],
+                          description: "#{row[:manufacturer]}の薬品です。有効期限は#{row[:expiration_date]}です。"))
+    product.set_property("製造元", row[:manufacturer])
+    product.set_property("割引率", row[:discount_rate])
+    product.set_property("数量", row[:amount])
+    product.set_property("有効期限", row[:expiration_date])
+    product.set_property("ロット番号", row[:lot])
+    product.save
+  end
 end

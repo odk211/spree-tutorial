@@ -14,6 +14,6 @@ location.save!
 
 Spree::Variant.all.each do |variant|
   variant.stock_items.each do |stock_item|
-    Spree::StockMovement.create(:quantity => 10, :stock_item => stock_item)
+    Spree::StockMovement.create(:quantity => 1, :stock_item => stock_item)
   end
 end
