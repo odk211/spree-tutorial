@@ -10,7 +10,9 @@ end
 
 image_pool = create_image_pool
 
-Spree::Product.all.each do |product|
-  product.master.images.create!({ attachment: image_pool.sample })
+Spree::Product.transaction do
+  Spree::Product.all.each do |product|
+    product.master.images.create!({ attachment: image_pool.sample })
+  end
 end
 
