@@ -8,11 +8,12 @@ def create_image_pool
   end
 end
 
-image_pool = create_image_pool
+# TODO Currently disabled due to performance issue
+# image_pool = create_image_pool
 
-Spree::Product.transaction do
-  Spree::Product.all.each do |product|
-    product.master.images.create!({ attachment: image_pool.sample })
-  end
-end
+# Spree::Product.transaction do
+#   Spree::Product.all.each do |product|
+#     product.master.images.create!({ attachment: image_pool.sample })
+#   end
+# end
 
