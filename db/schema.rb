@@ -519,7 +519,7 @@ ActiveRecord::Schema.define(version: 20150730052415) do
 
   create_table "spree_properties", force: :cascade do |t|
     t.string   "name",         limit: 255
-    t.string   "presentation", limit: 255
+    t.string   "presentation", limit: 255, null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
@@ -865,7 +865,7 @@ ActiveRecord::Schema.define(version: 20150730052415) do
   add_index "spree_tax_rates", ["zone_id"], name: "index_spree_tax_rates_on_zone_id", using: :btree
 
   create_table "spree_taxonomies", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name",       limit: 255,             null: false
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.integer  "position",   limit: 4,   default: 0
@@ -876,7 +876,7 @@ ActiveRecord::Schema.define(version: 20150730052415) do
   create_table "spree_taxons", force: :cascade do |t|
     t.integer  "parent_id",         limit: 4
     t.integer  "position",          limit: 4,     default: 0
-    t.string   "name",              limit: 255
+    t.string   "name",              limit: 255,               null: false
     t.string   "permalink",         limit: 255
     t.integer  "taxonomy_id",       limit: 4
     t.integer  "lft",               limit: 4
