@@ -34,7 +34,11 @@ Spree::Product.transaction do
     product = Spree::Product.create!(
       default_attrs.merge(name:        row[:name],
                           price:       row[:price],
-                          description: "#{row[:manufacturer]}の薬品です。有効期限は#{row[:expiration_date]}です。"))
+                          description: <<-"HTML"
+#{row[:manufacturer]} の薬品です 。<br>
+有効期限は #{row[:expiration_date]} です 。<br>
+      HTML
+      ))
     product.set_property("製造元", row[:manufacturer])
     product.set_property("割引率", row[:discount_rate])
     product.set_property("数量", row[:amount])
