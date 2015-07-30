@@ -60,7 +60,7 @@ group :production do
 end
 
 # Use Spree components
-gem 'spree', github: 'odk211/spree', branch: '3-0-stable'
-gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
-gem 'spree_i18n',  github: 'odk211/spree_i18n',  branch: '3-0-stable'
-gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: '3-0-stable'
+gem 'spree', github: 'odk211/spree', branch: 'master'
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
+gem 'spree_i18n',  github: 'odk211/spree_i18n',  branch: 'master'
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 'master'
