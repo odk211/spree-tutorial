@@ -9,7 +9,6 @@ ap:
     - "3000"
   environment:
     - RAILS_ENV=production
-    - AUTO_ACCEPT=true
     - RAILS_SERVE_STATIC_FILES
     - FIRST_STORE_DATABASE_HOST
     - FIRST_STORE_DATABASE_USER
