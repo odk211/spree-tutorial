@@ -9,17 +9,6 @@
 #
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
-Spree.config do |config|
-  # Example:
-  # Uncomment to stop tracking inventory levels in the application
-  # config.track_inventory_levels = false
-  config.company = true
-  config.currency = 'JPY'
-  #config.binary_inventory_cache = false
-  config.default_country_id = 1
-  config.show_variant_full_price = true
-  # config.track_inventory_levels = false
-end
 
 Spree.user_class = "Spree::User"
 

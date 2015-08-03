@@ -1,5 +1,5 @@
 require 'carmen'
-
+Carmen.i18n_backend.locale = :ja
 japan = Carmen::Country.coded("JP")
 Spree::Country.create!(
   name:            japan.name,
@@ -9,4 +9,3 @@ Spree::Country.create!(
   numcode:         japan.numeric_code,
   states_required: japan.subregions?
 )
-Spree::Config[:default_country_id] = Spree::Country.find_by(iso: "JP").id
