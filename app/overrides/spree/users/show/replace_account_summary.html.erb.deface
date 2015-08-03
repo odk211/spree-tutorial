@@ -1,0 +1,24 @@
+<!-- replace "[data-hook='account_summary'], #account_summary[data-hook]"
+     -->
+<div data-hook="account_summary" class="account-summary well">
+  <div class="row steps-data">
+    <div class="col-md-3">
+      <h4><%= Spree.t(:email) %></h4>
+      <%= @user.email %>
+    </div>
+    <% if @user.billing_address.present? %>
+      <div class="col-md-3">
+        <h4><%= Spree.t(:billing_address) %></h4>
+        <%= render 'spree/shared/address', address: @user.billing_address %>
+      </div>
+    <% end %>
+    <% if @user.shipping_address.present? %>
+      <div class="col-md-3">
+        <h4><%= Spree.t(:shipping_address) %></h4>
+        <%= render 'spree/shared/address', address: @user.shipping_address %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to Spree.t(:edit), spree.edit_account_path %>
+</div>
+
